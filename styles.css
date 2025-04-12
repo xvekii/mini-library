@@ -5,7 +5,8 @@
 body {
   font-family: Arial, Helvetica, sans-serif;
   line-height: 1.2;
-  text-align: center;
+  /* text-align: center; */
+  margin: 0;
 }
 
 h1 {
@@ -27,3 +28,38 @@ h1 {
   background-color: white;
   box-shadow: 2px 2px 0px 0px #bdbdbd;
 }
+
+form {
+  display: inline-block;
+  padding: 1rem;
+  border: 1px solid #ccc;
+  border-radius: 1rem;
+  width: 500px;
+  margin: 0 auto;
+}
+
+p + p {
+  margin-top: 1rem;
+}
+
+input {
+  font: 1rem sans-serif;
+  width: 300px;
+  border: 1px solid #999;
+}
+
+label {
+  display: inline-block;
+  width: 150px;
+  text-align: right;
+}
+
+.add-book-btn {
+
+}
+
+.add-book-btn-div {
+  display: flex;
+  justify-content: flex-end;
+}
+

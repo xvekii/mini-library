@@ -5,7 +5,7 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>Mini Library</title>
   <link rel="stylesheet" href="styles.css">
-  <script src="script.js"></script>
+  <script src="script.js" defer></script>
 </head>
 <body>
   <h1>Mini Library</h1>
@@ -15,7 +15,27 @@
       </button>
     </div>
   <main class="container">
-
+    <dialog id="dialog">
+      <form id="book-form">
+        <p>
+          <label for="title">Title of the book:</label>
+          <input type="text" id="title" name="book-title">
+        </p>
+        <p>
+          <label for="author">Name of the author:</label>
+          <input type="text" id="author" name="book-author">
+        </p>
+        <p>
+          <label for="pages">Number of pages:</label>
+          <input type="number" id="pages" name="number-of-pages">
+        </p>
+        <p>
+          <label for="year">Year:</label>
+          <input type="number" id="year" name="year">
+        </p>
+        <button class="add-book-btn" type="button">Add book</button>
+      </form>
+    </dialog>
   </main>
   
 </body>

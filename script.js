@@ -2,6 +2,7 @@ const dialog = document.getElementById("dialog");
 const form = document.getElementById("book-form");
 const newBookBtn = document.querySelector(".new-book-btn");
 const addBookBtn = document.querySelector(".add-book-btn");
+const closeDialogBtn = document.querySelector(".close-dialog-btn");
 
 const myLibrary = [];
 function Book(title, author, pages, year) {
@@ -21,6 +22,10 @@ form.addEventListener("submit", function(event) {
   processFormData();
   
   console.log(myLibrary);
+  form.reset();
+});
+
+closeDialogBtn.addEventListener("click", () => {
   dialog.close();
   form.reset();
 });

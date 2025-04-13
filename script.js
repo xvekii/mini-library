@@ -52,17 +52,11 @@ function displayBooks() {
   myLibrary.forEach((book) => {
     console.log(book.title);
     
-    // div .card wrapper
+    // Card
     const newCard = document.createElement("div");
     newCard.classList.add("card");
-
-    // div .card-top-icons +
-      // span .card-book-icon-span +
-        // image .book-icon +
-      // btn .rm-book-btn +
-        // img .rm-book-icon +
     
-    // div .card-top-icons
+    // Card top icons
     const cardTopIconsDiv = document.createElement("div");
     cardTopIconsDiv.classList.add("card-top-icons");
     
@@ -79,7 +73,6 @@ function displayBooks() {
     const rmBookIcon = document.createElement("img");
     rmBookIcon.classList.add("rm-book-icon");
     rmBookIcon.src = "images/remove-book.svg";
-
 
     // Title
     const paraTitle = document.createElement("p");
@@ -130,11 +123,7 @@ function displayBooks() {
     spanFillRead.classList.add("read-status");
 
 
-    // div .card-bottom-buttons  +
-      // span .info-icon-span  +
-        // image .info-icon +
-      // btn .book-status-btn +
-        // img .book-status-icon +
+    // Bottom btns
     const cardBottomBtnsDiv = document.createElement("div");
     cardBottomBtnsDiv.classList.add("card-bottom-buttons");
 
@@ -154,7 +143,7 @@ function displayBooks() {
 
 
     // Appending
-    // card-top-icons
+    // Card top icons, buttons
     cardContainer.appendChild(newCard);
     newCard.appendChild(cardTopIconsDiv);
 
@@ -189,15 +178,11 @@ function displayBooks() {
     paraRead.appendChild(spanRead);
     paraRead.appendChild(spanFillRead);
 
-    // div .card-bottom-buttons  +
-      // span .info-icon-span +
-        // image .info-icon  +
-      // btn .book-status-btn +
-        // img .book-status-icon  +
+    // Bottom buttons
     newCard.appendChild(cardBottomBtnsDiv);
     cardBottomBtnsDiv.appendChild(infoIconSpan);
+  
     infoIconSpan.appendChild(infoIcon);
-
     cardBottomBtnsDiv.appendChild(bookStatusBtn);
     bookStatusBtn.appendChild(bookStatusIcon);
   });

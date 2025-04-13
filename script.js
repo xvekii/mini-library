@@ -74,85 +74,83 @@ function displayBooks() {
     bookIcon.src = "images/book.svg";
 
     const rmBookBtn = document.createElement("button");
-    rmBookBtn.classList.add("rmBookBtn");
+    rmBookBtn.classList.add("rm-book-btn");
     
     const rmBookIcon = document.createElement("img");
     rmBookIcon.classList.add("rm-book-icon");
     rmBookIcon.src = "images/remove-book.svg";
 
 
-    // p .card-p +
-      // span Title +
-      // span .title +
+    // Title
     const paraTitle = document.createElement("p");
     paraTitle.classList.add("card-p");
-    
     const spanTitle = document.createElement("span");
     spanTitle.textContent = "Title";
-
     const spanFillTitle = document.createElement("span");
     spanFillTitle.classList.add("title");
 
-    // p .card-p +
-      // span Author +
-      // span .author +
+    // Author
     const paraAuthor = document.createElement("p");
     paraAuthor.classList.add("card-p");
-
     const spanAuthor = document.createElement("span");
     spanAuthor.textContent = "Author";
-
     const spanFillAuthor = document.createElement("span");
     spanFillAuthor.classList.add("author");
 
-    // p .card-p +
-      // span Pages +
-      // span .pages +
+    // Pages
     const paraPages = document.createElement("p");
     paraPages.classList.add("card-p");
-
     const spanPages = document.createElement("span");
     spanPages.textContent = "Pages";
-
     const spanFillPages = document.createElement("span");
     spanFillPages.classList.add("pages");
 
-    // p .card-p +
-      // span Book ID +
-      // span .ID +
+    // Book ID
     const paraID = document.createElement("p");
     paraID.classList.add("card-p");
-
     const spanID = document.createElement("span");
     spanID.textContent = "Book ID";
-
     const spanFillID = document.createElement("span");
     spanFillID.classList.add("ID");
 
-    // p .card-p +
-      // span Year +
-      // span .year
+    // Year
     const paraYear = document.createElement("p");
     paraYear.classList.add("card-p");
-
     const spanYear = document.createElement("span");
     spanYear.textContent = "Year";
-
     const spanFillYear = document.createElement("span");
     spanFillYear.classList.add("year");
 
-    // p .card-p +
-      // span Read +
-      // span .read-status +
+    // Read
     const paraRead = document.createElement("p");
     paraRead.classList.add("card-p");
-
     const spanRead = document.createElement("span");
     spanRead.textContent = "Read";
-
     const spanFillRead = document.createElement("span");
     spanFillRead.classList.add("read-status");
 
+
+    // div .card-bottom-buttons  +
+      // span .info-icon-span  +
+        // image .info-icon +
+      // btn .book-status-btn +
+        // img .book-status-icon +
+    const cardBottomBtnsDiv = document.createElement("div");
+    cardBottomBtnsDiv.classList.add("card-bottom-buttons");
+
+    const infoIconSpan = document.createElement("span");
+    infoIconSpan.classList.add("info-icon-span");
+
+    const infoIcon = document.createElement("img");
+    infoIcon.classList.add("info-icon");
+    infoIcon.src = src="images/info.svg";
+
+    const bookStatusBtn = document.createElement("button");
+    bookStatusBtn.classList.add("book-status-btn");
+
+    const bookStatusIcon = document.createElement("img");
+    bookStatusIcon.classList.add("book-status-icon");
+    bookStatusIcon.src = "images/book-unread.svg";
 
 
     // Appending
@@ -191,5 +189,16 @@ function displayBooks() {
     paraRead.appendChild(spanRead);
     paraRead.appendChild(spanFillRead);
 
+    // div .card-bottom-buttons  +
+      // span .info-icon-span +
+        // image .info-icon  +
+      // btn .book-status-btn +
+        // img .book-status-icon  +
+    newCard.appendChild(cardBottomBtnsDiv);
+    cardBottomBtnsDiv.appendChild(infoIconSpan);
+    infoIconSpan.appendChild(infoIcon);
+
+    cardBottomBtnsDiv.appendChild(bookStatusBtn);
+    bookStatusBtn.appendChild(bookStatusIcon);
   });
 }

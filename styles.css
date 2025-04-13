@@ -51,7 +51,7 @@ legend {
   text-align: left;
   color: #585858;
   font-weight: bolder;
-  background: #f5f5f5;
+  background: #ffffff;
 }
 
 p + p {
@@ -70,13 +70,8 @@ label {
   text-align: right;
 }
 
-.add-book-btn {
-
-}
-
 .add-book-btn-div {
   display: flex;
   justify-content: flex-end;
   gap: 30px;
 }
-

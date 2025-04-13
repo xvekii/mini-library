@@ -185,5 +185,13 @@ function displayBooks() {
     infoIconSpan.appendChild(infoIcon);
     cardBottomBtnsDiv.appendChild(bookStatusBtn);
     bookStatusBtn.appendChild(bookStatusIcon);
+
+
+    spanFillTitle.textContent = `${book.title}`
+    spanFillAuthor.textContent = `${book.author}`
+    spanFillPages.textContent = `${book.pages}`
+    spanFillID.textContent = `${book.ID}`
+    spanFillYear.textContent = `${book.year}`
+    // spanFillRead.textContent = `${book.}`
   });
 }

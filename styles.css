@@ -101,7 +101,13 @@ label {
 .card-p, 
 .card-top-icons, 
 .card-bottom-buttons {
-  padding: 10px 20px;
+  padding: 5px 20px;
+  
+}
+
+.card-p {
+  display: flex;
+  gap: 220px;
 }
 
 .card-top-icons {

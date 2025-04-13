@@ -5,8 +5,11 @@
 body {
   font-family: Arial, Helvetica, sans-serif;
   line-height: 1.2;
-  text-align: center;
-  margin: 0;
+}
+
+header {
+  display: flex;
+  justify-content: center;
 }
 
 h1 {
@@ -78,4 +81,69 @@ label {
   display: flex;
   justify-content: flex-end;
   gap: 30px;
+}
+
+.container {
+  margin-top: 80px;
+  display: flex;
+  justify-content: center;
+  width: 100%;
+  min-height: min-height: 100vh;
+}
+
+.card {
+  border: 2px solid #e4e4e4;
+  width: 610px;
+  border-radius: 18px;
+  box-shadow: 3px 4px 3px 0px #D6D6D6;
+}
+
+.card-p, 
+.card-top-icons, 
+.card-bottom-buttons {
+  padding: 10px 20px;
+}
+
+.card-top-icons {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding-top: 20px;
+}
+
+.card-book-icon-span {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.card-bottom-buttons {
+  display: flex;
+  justify-content: flex-end;
+  align-items: center;
+  padding-bottom: 20px;
+}
+
+.rm-book-btn, .book-status-btn {
+  padding: 0;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  border: none;
+  background-color: white;
+}
+
+.book-icon {
+  width: 25px;
+  height: 25px;
+}
+
+.rm-book-icon,
+.book-status-icon {
+  width: 30px;
+  height: 30px;
+}
+
+.info-icon-span {
+  align-self: flex-start;
 }

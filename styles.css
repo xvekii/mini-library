@@ -166,6 +166,11 @@ label {
   height: 30px;
 }
 
+.info-icon-btn-div {
+  position: relative;
+  display: inline-block;
+}
+
 .info-icon-btn {
   display: flex;
   justify-content: center;
@@ -174,3 +179,15 @@ label {
   border: none;
   padding: 6px 6px;
 }
+
+.toggle-tip-span-hidden {
+  display: none;
+}
+
+.toggle-tip-span-visible {
+  display: inline-block;
+  position: absolute;
+  top: -56px;
+  left: 240%;
+}
+

@@ -46,6 +46,17 @@ function addBookToLibrary(title, author, pages, year) {
   myLibrary.push(book);
 }
 
+document.addEventListener("click", function(event) {
+  const visibleTip = document.querySelector(".toggle-tip-span-visible");
+  if (
+    visibleTip &&
+    !visibleTip.contains(event.target) &&
+    !event.target.closest(".info-icon-btn-div") 
+  ) {
+    visibleTip.classList.remove("toggle-tip-span-visible");
+  }
+});
+
 function displayBooks() {
   cardContainer.replaceChildren();
 

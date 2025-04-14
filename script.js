@@ -127,12 +127,20 @@ function displayBooks() {
     const cardBottomBtnsDiv = document.createElement("div");
     cardBottomBtnsDiv.classList.add("card-bottom-buttons");
 
+    // Add info div
+    const infoIconBtnDiv = document.createElement("div");
+    infoIconBtnDiv.classList.add("info-icon-btn-div");
+
     const infoIconBtn = document.createElement("button");
     infoIconBtn.classList.add("info-icon-btn");
 
     const infoIcon = document.createElement("img");
     infoIcon.classList.add("info-icon");
     infoIcon.src = src="images/info.svg";
+
+    const toggleTipSpan = document.createElement("span");
+    toggleTipSpan.classList.add("toggle-tip-span-hidden");
+    toggleTipSpan.textContent = "Hola!";
 
     const bookStatusBtn = document.createElement("button");
     bookStatusBtn.classList.add("book-status-btn");
@@ -180,12 +188,19 @@ function displayBooks() {
 
     // Bottom buttons
     newCard.appendChild(cardBottomBtnsDiv);
-    cardBottomBtnsDiv.appendChild(infoIconBtn);
-  
+    cardBottomBtnsDiv.appendChild(infoIconBtnDiv);
+
+    infoIconBtnDiv.appendChild(infoIconBtn);
     infoIconBtn.appendChild(infoIcon);
+   
+    infoIconBtnDiv.appendChild(toggleTipSpan);
+   
     cardBottomBtnsDiv.appendChild(bookStatusBtn);
     bookStatusBtn.appendChild(bookStatusIcon);
 
+    infoIconBtnDiv.addEventListener("click", () => {
+      toggleTipSpan.classList.toggle("toggle-tip-span-visible");
+    });
 
     spanFillTitle.textContent = `${book.title}`
     spanFillAuthor.textContent = `${book.author}`

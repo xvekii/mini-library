@@ -143,7 +143,7 @@ function displayBooks() {
 
     const toggleTipSpan = document.createElement("span");
     toggleTipSpan.classList.add("toggle-tip-span-hidden");
-    toggleTipSpan.textContent = "Hola!";
+    toggleTipSpan.textContent = "Click the book icon below to mark as read or unread.";
 
     const bookStatusBtn = document.createElement("button");
     bookStatusBtn.classList.add("book-status-btn");
@@ -152,7 +152,6 @@ function displayBooks() {
     bookStatusIcon.classList.add("book-status-icon");
     bookStatusIcon.src = "images/book-unread.svg";
     bookStatusIcon.alt = "Book unread";
-
 
     // Appending
     // Card top icons, buttons

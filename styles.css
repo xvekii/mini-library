@@ -187,7 +187,11 @@ label {
 .toggle-tip-span-visible {
   display: inline-block;
   position: absolute;
-  top: -56px;
-  left: 240%;
+  top: -103px;
+  left: 73%;
+  width: 167px;
+  background-color: lightgreen;
+  border-radius: 12px;
+  padding: 16px;
 }
 

@@ -166,6 +166,11 @@ label {
   height: 30px;
 }
 
-.info-icon-span {
-  align-self: flex-start;
+.info-icon-btn {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  background-color: white;
+  border: none;
+  padding: 6px 6px;
 }

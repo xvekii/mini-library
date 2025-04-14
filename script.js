@@ -66,6 +66,7 @@ function displayBooks() {
     const bookIcon = document.createElement("img");
     bookIcon.classList.add("book-icon");
     bookIcon.src = "images/book.svg";
+    bookIcon.alt="A book";
 
     const rmBookBtn = document.createElement("button");
     rmBookBtn.classList.add("rm-book-btn");
@@ -73,6 +74,7 @@ function displayBooks() {
     const rmBookIcon = document.createElement("img");
     rmBookIcon.classList.add("rm-book-icon");
     rmBookIcon.src = "images/remove-book.svg";
+    rmBookIcon.alt = "Remove book";
 
     // Title
     const paraTitle = document.createElement("p");
@@ -137,6 +139,7 @@ function displayBooks() {
     const infoIcon = document.createElement("img");
     infoIcon.classList.add("info-icon");
     infoIcon.src = src="images/info.svg";
+    infoIcon.alt = "Info icon";
 
     const toggleTipSpan = document.createElement("span");
     toggleTipSpan.classList.add("toggle-tip-span-hidden");
@@ -148,6 +151,7 @@ function displayBooks() {
     const bookStatusIcon = document.createElement("img");
     bookStatusIcon.classList.add("book-status-icon");
     bookStatusIcon.src = "images/book-unread.svg";
+    bookStatusIcon.alt = "Book unread";
 
 
     // Appending

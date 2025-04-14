@@ -127,8 +127,8 @@ function displayBooks() {
     const cardBottomBtnsDiv = document.createElement("div");
     cardBottomBtnsDiv.classList.add("card-bottom-buttons");
 
-    const infoIconSpan = document.createElement("span");
-    infoIconSpan.classList.add("info-icon-span");
+    const infoIconBtn = document.createElement("button");
+    infoIconBtn.classList.add("info-icon-btn");
 
     const infoIcon = document.createElement("img");
     infoIcon.classList.add("info-icon");
@@ -180,9 +180,9 @@ function displayBooks() {
 
     // Bottom buttons
     newCard.appendChild(cardBottomBtnsDiv);
-    cardBottomBtnsDiv.appendChild(infoIconSpan);
+    cardBottomBtnsDiv.appendChild(infoIconBtn);
   
-    infoIconSpan.appendChild(infoIcon);
+    infoIconBtn.appendChild(infoIcon);
     cardBottomBtnsDiv.appendChild(bookStatusBtn);
     bookStatusBtn.appendChild(bookStatusIcon);
 

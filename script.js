@@ -10,8 +10,9 @@ function Book(title, author, pages, year) {
   this.title = title;
   this.author = author;
   this.pages = pages;
-  this.year = year;
   this.ID = crypto.randomUUID();
+  this.year = year;
+  this.read = "No";
 }
 
 newBookBtn.addEventListener("click", () => {
@@ -221,6 +222,6 @@ function displayBooks() {
     spanFillPages.textContent = `${book.pages}`
     spanFillID.textContent = `${book.ID}`
     spanFillYear.textContent = `${book.year}`
-    // spanFillRead.textContent = `${book.}`
+    spanFillRead.textContent = `${book.read}`
   });
 }

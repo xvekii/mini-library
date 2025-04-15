@@ -13,6 +13,16 @@ function Book(title, author, pages, year) {
   this.ID = crypto.randomUUID();
   this.year = year;
   this.read = "No";
+
+  this.toggleReadStatus = function() {
+    if (this.read === "No") {
+      this.read = "Yes";
+      return "Yes";
+    } else {
+      this.read = "No";
+      return "No";
+    }
+  }
 }
 
 newBookBtn.addEventListener("click", () => {
@@ -230,6 +240,17 @@ function displayBooks() {
       const targetID = event.currentTarget.getAttribute("data-book-ID");
       myLibrary.splice(myLibrary.findIndex(book => book.ID === `${targetID}`), 1);
       displayBooks();
+    });
+
+    bookStatusBtn.addEventListener("click", function() {
+      const currentReadStatus = book.toggleReadStatus();
+      if (currentReadStatus === "Yes") {
+        bookStatusIcon.src = "images/book-read.svg";
+      } else {
+        bookStatusIcon.src = "images/book-unread.svg";
+      }
+      console.log(currentReadStatus);
+      spanFillRead.textContent = currentReadStatus;
     });
   });
 }

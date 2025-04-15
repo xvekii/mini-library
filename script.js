@@ -67,6 +67,7 @@ function displayBooks() {
     // Card
     const newCard = document.createElement("div");
     newCard.classList.add("card");
+    newCard.setAttribute("data-book-ID", `${book.ID}`);
     
     // Card top icons
     const cardTopIconsDiv = document.createElement("div");
@@ -82,6 +83,7 @@ function displayBooks() {
 
     const rmBookBtn = document.createElement("button");
     rmBookBtn.classList.add("rm-book-btn");
+    rmBookBtn.setAttribute("data-book-ID", `${book.ID}`);
     
     const rmBookIcon = document.createElement("img");
     rmBookIcon.classList.add("rm-book-icon");
@@ -223,5 +225,11 @@ function displayBooks() {
     spanFillID.textContent = `${book.ID}`
     spanFillYear.textContent = `${book.year}`
     spanFillRead.textContent = `${book.read}`
+
+    rmBookBtn.addEventListener("click", function(event) {
+      const targetID = event.currentTarget.getAttribute("data-book-ID");
+      myLibrary.splice(myLibrary.findIndex(book => book.ID === `${targetID}`), 1);
+      displayBooks();
+    });
   });
 }

@@ -13,16 +13,11 @@ function Book(title, author, pages, year) {
   this.ID = crypto.randomUUID();
   this.year = year;
   this.read = "No";
+}
 
-  this.toggleReadStatus = function() {
-    if (this.read === "No") {
-      this.read = "Yes";
-      return "Yes";
-    } else {
-      this.read = "No";
-      return "No";
-    }
-  }
+Book.prototype.toggleReadStatus = function() {
+  this.read = this.read === "No" ? "Yes" : "No";
+  return this.read;
 }
 
 newBookBtn.addEventListener("click", () => {

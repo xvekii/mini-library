@@ -27,15 +27,15 @@
           </p>
           <p class="form-p">
             <label for="author">Name of the author</label>
-            <input type="text" id="author" name="book-author">
+            <input type="text" id="author" name="book-author" required>
           </p>
           <p class="form-p">
             <label for="pages">Number of pages</label>
-            <input type="number" id="pages" name="number-of-pages">
+            <input type="text" inputmode="numeric" pattern="\d*" minlength="1" maxlength="5" min="1" max="30000" id="pages" name="number-of-pages" required>
           </p>
           <p class="form-p">
             <label for="year">Year</label>
-            <input type="number" id="year" name="year">
+            <input type="text" inputmode="numeric" pattern="\d*" minlength="1" maxlength="4" min="0" max="3000" id="year" name="year" required>
           </p>
           <div class="add-book-btn-div">
             <button class="close-dialog-btn" type="button">Close</button>

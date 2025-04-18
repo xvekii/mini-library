@@ -17,8 +17,10 @@ h1 {
 }
 
 .new-book-btn-div {
-  margin-left: 250px;
-  margin-top: 80px;
+  margin-left: 3rem;
+  margin-top: 3rem;
+  display: flex;
+  justify-content: flex-start;
 }
 
 .new-book-btn {
@@ -35,13 +37,15 @@ h1 {
 dialog {
   border: 1px solid #ccc;
   border-radius: 1rem;
+  min-width: 40%;
 }
 
 form {
   display: inline-block;
   padding: 1rem;
-  width: 550px;
+  width: 100%;
   margin: 0 auto;
+
 }
 
 fieldset {
@@ -63,24 +67,26 @@ p + p {
 
 input {
   font: 1rem sans-serif;
-  width: 300px;
+  width: 100%; 
+  max-width: 100%; 
   border: 1px solid #999;
 }
 
 #pages, #year {
-  width: 70px;
+  width: 4.375rem; /* 70px equivalent in rem */
 }
 
 label {
   display: inline-block;
   width: 150px;
-  text-align: right;
+  text-align: left;
 }
 
 .add-book-btn-div {
   display: flex;
   justify-content: flex-end;
-  gap: 30px;
+  gap: 2.5rem;
+  padding-top: 0.5rem;
 }
 
 .container {
@@ -91,9 +97,19 @@ label {
   min-height: 100vh;
 }
 
+.card-container {
+  display: flex;
+  justify-content: center;
+  width: 80%;
+  height: 50%;
+  align-content: center;
+  flex-wrap: wrap;
+}
+
 .card {
   border: 2px solid #e4e4e4;
-  width: 550px;
+  width: 90%; /* Use a percentage for responsiveness */
+  max-width: 34.375rem; /* 550px equivalent in rem */
   border-radius: 10px;
   box-shadow: 3px 4px 6px 0px #bbb8b8;
   margin-bottom: 1.5rem;
@@ -188,7 +204,7 @@ label {
   display: inline-block;
   position: absolute;
   top: -103px;
-  left: 73%;
+  left: -357%;
   width: 167px;
   background-color: lightgreen;
   border-radius: 12px;

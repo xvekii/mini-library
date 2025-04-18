@@ -22,6 +22,7 @@ Book.prototype.toggleReadStatus = function() {
 
 newBookBtn.addEventListener("click", () => {
   dialog.showModal();
+  document.body.classList.toggle("body-blocked-scrolling");
 });
 
 form.addEventListener("submit", function(event) {
@@ -33,6 +34,7 @@ form.addEventListener("submit", function(event) {
 
 closeDialogBtn.addEventListener("click", () => {
   dialog.close();
+  document.body.classList.remove("body-blocked-scrolling");
   form.reset();
 });
 

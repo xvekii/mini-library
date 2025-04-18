@@ -28,7 +28,6 @@ form.addEventListener("submit", function(event) {
   event.preventDefault();
   processFormData();
   
-  console.log(myLibrary);
   form.reset();
 });
 
@@ -224,12 +223,12 @@ function displayBooks() {
       toggleTipSpan.classList.toggle("toggle-tip-span-visible");
     });
 
-    spanFillTitle.textContent = `${book.title}`
-    spanFillAuthor.textContent = `${book.author}`
-    spanFillPages.textContent = `${book.pages}`
-    spanFillID.textContent = `${book.ID}`
-    spanFillYear.textContent = `${book.year}`
-    spanFillRead.textContent = `${book.read}`
+    spanFillTitle.textContent = `${book.title}`;
+    spanFillAuthor.textContent = `${book.author}`;
+    spanFillPages.textContent = `${book.pages}`;
+    spanFillID.textContent = `${book.ID}`;
+    spanFillYear.textContent = `${book.year}`;
+    spanFillRead.textContent = `${book.read}`;
 
     rmBookBtn.addEventListener("click", function(event) {
       const targetID = event.currentTarget.getAttribute("data-book-ID");

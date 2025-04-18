@@ -4,6 +4,8 @@ const newBookBtn = document.querySelector(".new-book-btn");
 const addBookBtn = document.querySelector(".add-book-btn");
 const closeDialogBtn = document.querySelector(".close-dialog-btn");
 const cardContainer = document.querySelector(".card-container");
+const pages = document.getElementById("pages");
+const year = document.getElementById("year");
 
 const myLibrary = [];
 function Book(title, author, pages, year) {
@@ -25,16 +27,15 @@ newBookBtn.addEventListener("click", () => {
   document.body.classList.toggle("body-blocked-scrolling");
 });
 
-form.addEventListener("submit", function(event) {
-  event.preventDefault();
-  processFormData();
-  
-  form.reset();
-});
-
 closeDialogBtn.addEventListener("click", () => {
   dialog.close();
   document.body.classList.remove("body-blocked-scrolling");
+  form.reset();
+});
+
+form.addEventListener("submit", function(event) {
+  event.preventDefault();
+  processFormData();
   form.reset();
 });
 
@@ -64,12 +65,18 @@ document.addEventListener("click", function(event) {
   }
 });
 
+pages.addEventListener("input", function() {
+  this.value = this.value.replace(/\D/g, '');
+});
+
+year.addEventListener("input", function() {
+  this.value = this.value.replace(/\D/g, '');
+});
+
 function displayBooks() {
   cardContainer.replaceChildren();
 
-  myLibrary.forEach((book) => {
-    console.log(book.title);
-    
+  myLibrary.forEach((book) => {    
     // Card
     const newCard = document.createElement("div");
     newCard.classList.add("card");
@@ -87,6 +94,7 @@ function displayBooks() {
     bookIcon.src = "images/book.svg";
     bookIcon.alt="A book";
 
+    // Remove book button and icon
     const rmBookBtn = document.createElement("button");
     rmBookBtn.classList.add("rm-book-btn");
     rmBookBtn.setAttribute("data-book-ID", `${book.ID}`);
@@ -149,7 +157,7 @@ function displayBooks() {
     const cardBottomBtnsDiv = document.createElement("div");
     cardBottomBtnsDiv.classList.add("card-bottom-buttons");
 
-    // Add info div
+    // Info
     const infoIconBtnDiv = document.createElement("div");
     infoIconBtnDiv.classList.add("info-icon-btn-div");
 
@@ -161,10 +169,12 @@ function displayBooks() {
     infoIcon.src = src="images/info.svg";
     infoIcon.alt = "Info icon";
 
+    // Toggle tip
     const toggleTipSpan = document.createElement("span");
     toggleTipSpan.classList.add("toggle-tip-span-hidden");
     toggleTipSpan.textContent = "Click the book icon below to mark as read or unread.";
-
+    
+    // Status book button and icon
     const bookStatusBtn = document.createElement("button");
     bookStatusBtn.classList.add("book-status-btn");
 
@@ -245,7 +255,6 @@ function displayBooks() {
       } else {
         bookStatusIcon.src = "images/book-unread.svg";
       }
-      console.log(currentReadStatus);
       spanFillRead.textContent = currentReadStatus;
     });
   });

@@ -65,6 +65,11 @@ p + p {
   margin-top: 1rem;
 }
 
+.form-p {
+  display: grid;
+  color: #0000009c;
+}
+
 input {
   font: 1rem sans-serif;
   width: 100%; 
@@ -99,6 +104,7 @@ label {
 
 .card-container {
   display: flex;
+  gap: 2rem;
   justify-content: center;
   width: 80%;
   height: 50%;
@@ -108,8 +114,8 @@ label {
 
 .card {
   border: 2px solid #e4e4e4;
-  width: 90%; /* Use a percentage for responsiveness */
-  max-width: 34.375rem; /* 550px equivalent in rem */
+  width: 90%; 
+  max-width: 34.375rem;
   border-radius: 10px;
   box-shadow: 3px 4px 6px 0px #bbb8b8;
   margin-bottom: 1.5rem;

@@ -7,6 +7,7 @@ body {
   line-height: 1.2;
   margin-right: calc(-1 * (100vw - 100%));
   background-color: #ffd166a3;
+  overflow-x: hidden;
 }
 
 .body-blocked-scrolling {

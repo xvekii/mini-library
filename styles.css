@@ -39,8 +39,17 @@ h1 {
   padding: 8px 36px;
   border-radius: 8px;
   border: 1px solid #D6D6D6;
-  background-color: white;
+  background-color: #fffbed;
   box-shadow: 4px 3px 0px 0px #073b4ccc;
+  outline: rgb(31 8 68) solid 2px;
+  outline-offset: -3px;
+}
+
+.new-book-btn:active {
+  background: #25ea8d;
+  color: #ffffff;
+  outline: #61353f solid 2px;
+  outline-offset: 3px;
 }
 
 button, 
@@ -78,6 +87,11 @@ dialog {
   max-width: 750px;
   background-color: #fffbed;
   box-shadow: 4px 4px 4px 0px #000000;
+}
+
+dialog::backdrop {
+  background: black;
+  opacity: .7;
 }
 
 form {
@@ -145,7 +159,7 @@ label {
   display: flex;
   justify-content: center;
   width: 100%;
-  /* min-height: 100vh; */
+  min-height: 100vh;
 }
 
 .card-container {
@@ -159,7 +173,6 @@ label {
 }
 
 .card {
-  border: 1px solid #000000;
   width: 100%;
   max-width: 34.375rem;
   border-radius: 10px;

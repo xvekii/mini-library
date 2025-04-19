@@ -40,8 +40,8 @@ h1 {
   border-radius: 8px;
   border: 1px solid #D6D6D6;
   background-color: #fffbed;
-  box-shadow: 4px 3px 0px 0px #073b4ccc;
-  outline: rgb(31 8 68) solid 2px;
+  box-shadow: 3px 3px 0px 0px #073b4ccc;
+  outline:2px solid #1f0844;
   outline-offset: -3px;
 }
 

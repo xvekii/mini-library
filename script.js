@@ -1,25 +1,26 @@
 const dialog = document.getElementById("dialog");
 const form = document.getElementById("book-form");
 const newBookBtn = document.querySelector(".new-book-btn");
-const addBookBtn = document.querySelector(".add-book-btn");
 const closeDialogBtn = document.querySelector(".close-dialog-btn");
 const cardContainer = document.querySelector(".card-container");
 const pages = document.getElementById("pages");
 const year = document.getElementById("year");
-
 const myLibrary = [];
-function Book(title, author, pages, year) {
-  this.title = title;
-  this.author = author;
-  this.pages = pages;
-  this.ID = crypto.randomUUID();
-  this.year = year;
-  this.read = "No";
-}
 
-Book.prototype.toggleReadStatus = function() {
-  this.read = this.read === "No" ? "Yes" : "No";
-  return this.read;
+class Book {
+  constructor(title, author, pages, year) {
+    this.title = title;
+    this.author = author;
+    this.pages = pages;
+    this.ID = crypto.randomUUID();
+    this.year = year;
+    this.read = "No";
+  }
+
+  toggleReadStatus() {
+    this.read = this.read === "No" ? "Yes" : "No";
+    return this.read;
+  }
 }
 
 newBookBtn.addEventListener("click", () => {
@@ -37,6 +38,7 @@ form.addEventListener("submit", function(event) {
   event.preventDefault();
   processFormData();
   form.reset();
+  dialog.close();
 });
 
 function processFormData() {

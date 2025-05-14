@@ -88,6 +88,7 @@ dialog {
   max-width: 750px;
   background-color: #fffbed;
   box-shadow: 4px 4px 4px 0px #000000;
+  margin-top: 150px;
 }
 
 dialog::backdrop {
